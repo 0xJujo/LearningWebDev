@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+</head>
+<body>
+    <style>
+        .Uber{
+            background-color: black;
+            color: white;
+            border:none;
+            height: 40px;
+            width: 110px;
+            font-weight:bold;
+            transition: opacity 0.15s;
+            cursor: pointer;
+        }
+        .Uber:Hover{
+            opacity: 80%;
+        }
+        .Uber:active{
+            opacity: 50%;
+        }
+        .Amaz{
+            background-color: rgb(255, 255, 0);
+            color: black;
+            width: 150px;
+            height: 40px;
+            border: none;
+            border-radius: 100px;
+            font-weight:bold;
+            cursor: pointer;
+            transition: background-color 150ms;
+        }
+        .Amaz:hover{
+            background-color:rgb(144, 144, 0)
+        }
+        .Git{
+            height: 40px;
+            width: 80px;
+            background-color: rgb(0, 200, 0);
+            color: white;
+            font-weight: bold;
+            border: none; 
+            border-radius: 8px;
+            cursor: pointer;
+            transition: box-shadow 0.15ms;
+        }
+        .Git:hover{
+            box-shadow: 3px 3px 10px  rgba(0,0,0,0.5);
+        }
+        .Boot1{
+            height: 40px;
+            width: 90px;
+            background-color: rgb(255, 6, 255);
+            color: white;
+            font-weight: bolder;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .Boot1:hover{
+            background-color:rgb(169, 0, 169);
+        }
+        .Boot2{
+            height: 40px;
+            width: 90px;
+            background-color: white;
+            color: grey;
+            font-weight: bolder;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .Boot2:hover{
+            background-color:grey;
+            color: white;
+
+        }
+        .Link1{
+            height: 40px;
+            width: 200px;
+            border:none;
+            border-radius:50px;
+            background-color:blue;
+            color:white;
+            font-weight: bolder;
+            cursor:pointer;
+            transition: background-color 0.5s;
+        }
+        .Link1:hover{
+            background-color:rgb(0, 0, 148);
+        }
+        .Link2{ height: 40px;
+            width: 70px;
+            border-radius:50px;
+            border-color:blue;
+            background-color:white;
+            color:blue;
+            font-weight: bolder;
+            cursor:pointer;
+            transition: background-color 0.5s, border-width 0.5s;
+        }
+        .Link2:hover{
+            background-color: rgb(155, 154, 154);
+            border-width: 2px;
+        }
+        .Amazl{
+            color: green;
+        }
+        .Amazl:hover{
+            color: orange;
+        }
+    </style>
+    <button class="Uber">Request Now</button><br><hr><br>
+    <button class="Amaz">Add to cart</button><br><hr><br>
+    <button class="Git">Sign Up</button><br><hr><br>
+    <button class="Boot1">Get started</button>
+    <button class="Boot2">Download</button><br><hr><br>
+    <button class="Link1">Apply on company website</button>
+    <button class="Link2">Save</button><br><hr><br>
+    <a href="https://www.amazon.in/" target="blank" class="Amazl">Back to Amazon</a><br><hr><br>
+</body>
+</html>
