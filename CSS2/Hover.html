@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Hovering today</title>
+</head>
+<body>
+    <style>
+        .sub{
+            background-color: red;
+            color: white;
+            border:none;
+            height:36px;
+            width:106px;
+            border-radius:1000px;
+            cursor: pointer;
+            margin: 8px;
+            transition:opacity 0.15s;
+        }
+        .sub:hover{
+            opacity:0.8;
+        }
+        .sub:active{
+            opacity:0.5;
+        }
+        .jo{
+            background-color: white;
+            border-width: 1px;
+            height: 30px;
+            width:65px;
+            border-radius:5px;
+            color:blue;
+            border-color: blue;
+            cursor: pointer;
+            margin:8px;
+            transition: background-color 0.15s, color 0.15s;
+        }
+        .jo:hover{
+            background-color: blue;
+            color: white;
+        }
+        .twit{
+            border: none;
+            font-weight:bolder;
+            width: 70px;
+            height: 40px;
+            margin: 8px;
+            border-radius: 30px;
+            background-color:rgb(2,137,255);
+            color:white;
+            cursor: pointer;
+            transition: box-shadow 0.15s;
+        }
+        .twit:hover{
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
+        }
+    </style>
+    <button class="sub">SUBSCRIBE </button>
+    <button class="jo">JOIN</button>
+    <button class="twit">Tweet</button>
+</body>
+</html>
