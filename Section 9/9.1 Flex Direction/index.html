@@ -11,24 +11,19 @@
   -->
   <style>
     .container {
-      flex-direction: column;
       color: white;
       border: 5px solid gold;
-      display: flex;
+      display: inline-flex;
+      flex-direction: column;
     }
 
+    .container>*{
+      flex-basis: 100px;
+    }
     /*
 Select all the elements that are the direct
 children of the .container class.
     */
-
-    .contfainer div{
-      flex-basis: 100px;
-    }
-
-    *{
-      width: 20px;
-    }
 
     .red {background-color: #eb4d4b;}
     .orange {background-color: #f0932b;}
