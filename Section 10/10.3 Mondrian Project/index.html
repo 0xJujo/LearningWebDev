@@ -6,6 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mondrian Project</title>
   <style>
+    .center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gap{
+      background-color: black;
+    }
+    .main{
+      background-color: #F0F1EC ;
+      height: 748px;
+      width: 748px;
+      display: grid;
+      grid-template-columns: 320px 9px 1fr;
+      grid-template-rows: 414px 9px 1fr;
+      top: 50%;
+      left: 25%;
+    }
+    .third{
+      display: grid;
+      grid-template-rows: 1fr 9px 20px;
+    }
+    .fourth{
+      display: grid;
+      grid-template-columns: 351px 9px 1fr;
+    }
+    .fourthleft{
+      display: grid;
+      grid-template-rows: 1fr 9px 20px;
+    }
+    .yellowblack{
+      display: grid;
+      grid-template-columns: 198px 153px;
+    }
+    .fourthright{
+      display: grid;
+      grid-template-rows: 130px 19px 1fr;
+    }
     /* 
     Write your CSS here 
     Gap Colour: #000
@@ -24,6 +62,38 @@
 
 <body>
   <!-- Write your HTML here -->
+  <div class="center">
+  <div class="main">
+    <div class="first" style="background-color: #E72F24;"></div>
+    <div class="gap"></div>
+    <div class="second"></div>
+    <div class="gap"></div>
+    <div class="gap"></div>
+    <div class="gap"></div>
+    <div class="third">
+      <div class="thirdfirst"></div>
+      <div class="gap"></div>
+      <div class="thirdsecond"></div>
+    </div>
+    <div class="gap"></div>
+    <div class="fourth">
+      <div class="fourthleft">
+        <div></div>
+        <div class="gap"></div>
+        <div class="yellowblack">
+          <div style="background-color: #F9D01E;"></div>
+          <div style="background-color: #232629;"></div>
+        </div>
+      </div>
+      <div class="gap"></div>
+      <div class="fourthright">
+        <div style="background-color: #004592;"></div>
+        <div class="gap"></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
