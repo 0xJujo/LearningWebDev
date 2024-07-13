@@ -1,0 +1,1 @@
+prompt("Hello from the Node side!")
