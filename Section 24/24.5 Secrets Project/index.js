@@ -6,7 +6,8 @@ import bodyParser from "body-parser";
 import {fileURLToPath} from "url";
 import { dirname } from "path";
 
-var pass;
+var pass=false;
+var password;
 
 const __dirname=dirname(fileURLToPath(import.meta.url));
 const app= express();
@@ -14,20 +15,30 @@ const port=3000;
 
 app.use(bodyParser.urlencoded({extended:true}));
 
+function userAuth(req, res, next) {
+    password= req.body["password"];
+    if (password==="ILoveProgramming"){
+        pass=true;
+    };
+    console.log(password);
+    next();
+}
+
+app.use(userAuth);
+
 app.get("/", (req, res)=>{
     res.sendFile(__dirname+"/public/index.html");
 });
 
 app.post("/check",(req, res)=>{
-    pass=req.body;
-    console.log(pass);
-    if(pass=="ILoveProgramming"){
-        // res.sendFile(__dirname+"/public/secret.html");
+    if(pass){
+        res.sendFile(__dirname+"/public/secret.html");
         console.log("yess");
     } else {
-        // res.sendFile(__dirname+"/public/index.html");
+        res.sendFile(__dirname+"/public/index.html");
         console.log("noo");
     }
+
 });
 
 app.listen(port, () => {
