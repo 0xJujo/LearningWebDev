@@ -15,15 +15,17 @@
     <button type="submit" value="fish" name="choice">🐟</button>
   </form>
   <div id="recipeContainer" class="hidden">
-    <%if(locals.inp && locals.jason){%>
+    <%if(locals.data){%>
       <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
-      <h1><%=inp%> Taco</h1>
+      <h1><%=data.name%></h1>
         <h3>Ingredients:</h3>
         <ul id="ingredientsList">
-          <li>Protein name, protein preparation</li>
-          <li>Salsa name</li>
-          <li>Every other topping</li>
-        </ul>%>
+          <li><%=data.ingredients.protein.name%> <%=data.ingredients.protein.preparation%></li>
+          <li><%=data.ingredients.salsa.name%></li>
+          <%for(var i=0; i<data.ingredients.toppings.length; i++){%>
+            <li><%=data.ingredients.toppings[i].quantity%> of <%=data.ingredients.toppings[i].name%></li>  
+          <%}%>
+        </ul>
       <%} else {%>
         <h1>Pick your favourite taco ingredient 👆</h1>
       <%}%>
