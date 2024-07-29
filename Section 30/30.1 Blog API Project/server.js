@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.get("/", async (req, res) => {
   try {
     const response = await axios.get(`${API_URL}/posts`);
-    console.log(response);
+    // console.log(response);
     res.render("index.ejs", { posts: response.data });
   } catch (error) {
     res.status(500).json({ message: "Error fetching posts" });
@@ -30,7 +30,7 @@ app.get("/new", (req, res) => {
 app.get("/edit/:id", async (req, res) => {
   try {
     const response = await axios.get(`${API_URL}/posts/${req.params.id}`);
-    console.log(response.data);
+    // console.log(response.data);
     res.render("modify.ejs", {
       heading: "Edit Post",
       submit: "Update Post",
@@ -70,7 +70,8 @@ app.post("/api/posts/:id", async (req, res) => {
 // Delete a post
 app.get("/api/posts/delete/:id", async (req, res) => {
   try {
-    await axios.delete(`${API_URL}/posts/${req.params.id}`);
+    const response= await axios.delete(`${API_URL}/posts/${req.params.id}`);
+    console.log(response.data);
     res.redirect("/");
   } catch (error) {
     res.status(500).json({ message: "Error deleting post" });
